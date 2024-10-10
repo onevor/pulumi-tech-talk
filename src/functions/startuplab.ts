@@ -3,6 +3,10 @@ export async function handler(event: any, ctx: any) {
 
   return {
     statusCode: 200,
-    body: "WoopWoop"
-  }
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    },
+    body: JSON.stringify({ message: 'Woop Woop' }),
+  };
 }
